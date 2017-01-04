@@ -1,3 +1,0 @@
----
-- name: yum.repos.d includes epel.repo
-  action: copy src=epel.repo dest=/etc/yum.repos.d/epel.repo

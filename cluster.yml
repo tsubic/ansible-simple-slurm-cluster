@@ -14,10 +14,9 @@
   user: root
   vars_files:
   - config.yml
-  - s3.yml
   roles:
-  - "epel6"
-  - "ajdecon-repo"
+  - "epel7"
+#  - "arctur-repo"
   - "sethostname"
   - "etchosts"
   - "slurm"
@@ -30,10 +29,12 @@
   vars_files:
   - config.yml
   roles:
+  - "slurmdbd"
   - "nfs-server"
   - "rsyslog-collector"
   - "ganglia-gmetad"
   - "elk-log-server"
+  - "lmod"
   - role: "rsyslog-forwarder"
     syslog_target: "localhost"
     syslog_target_port: 5200

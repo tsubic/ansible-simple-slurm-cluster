@@ -6,5 +6,5 @@
 # might need to be changed.
 
 slurmctld_host: head
-slurm_cpus_per_node: 2
+slurm_cpus_per_node: 4
 upload_osu_benchmarks: true

@@ -1,4 +1,0 @@
----
-syslog_target: head
-syslog_target_port: 514
-syslog_fwd_file: "forward.conf"

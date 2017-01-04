@@ -1,3 +1,0 @@
----
-- name: gmetad is restarted
-  service: name=gmetad state=restarted

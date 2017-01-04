@@ -1,2 +1,0 @@
-An extremly simple (read: stupid) role that sets up an ELK-stack log server
-with a single syslog input.

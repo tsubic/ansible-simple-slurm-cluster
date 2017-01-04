@@ -1,3 +1,0 @@
----
-- name: slurmdbd is restarted
-  action: service name=slurmdbd state=restarted
