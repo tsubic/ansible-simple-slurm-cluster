@@ -1,0 +1,16 @@
+---
+- name: Apache and createrepo installed
+  action: yum name={{item}} state installed
+  with_items:
+  -httpd
+  -createrepo
+
+- name: RPMs are copied
+  action: copy *.rpm dest=/var/www/html/arcturepo
+
+- name: Repo is setup
+  command: createrepo /var/www/html/arcturepo
+
+- name: Local slurm repo is added to nodes
+  action: template src=arctur.el7.repo.j2 dest=/etc/yum.repos.d/arctur.el7.repo 
+  

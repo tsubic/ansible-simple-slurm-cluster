@@ -1,0 +1,17 @@
+---
+- name: ensure lua packages are installed
+  yum: name={{item}} state=present
+  with_items:
+  - lua
+  - lua-filesystem
+  - lua-posix
+  - lua-devel
+
+- name: ensure tcl packages are installed
+  yum: name={{item}} state=present
+  with_items:
+  - tcl
+  - tcl-devel
+
+- name: ensure lmod is installed
+  yum: name=

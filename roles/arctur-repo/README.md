@@ -1,0 +1,2 @@
+Download the desired slurm version and build the packages - really straightforward. Make sure to have mariadb and mariadb-devel installed.
+Put the RPMs in the /files folder. This role will create a yum repo on the head node and make it accessible to the other nodes so that we can istall slurm via yum.

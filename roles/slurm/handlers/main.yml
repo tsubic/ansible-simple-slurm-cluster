@@ -1,0 +1,12 @@
+---
+- name: munge is restarted
+  service: name=munge state=restarted
+
+- name: slurm is restarted
+  service: name=slurmctld state=restarted
+  when: inventory_hostname == "localhost"
+  service: name=slurmd state=restarted
+  when: "'compute' in group_names"
+
+- name: rsyslog is restarted
+  service: name=rsyslog state=restarted
